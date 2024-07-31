@@ -1,13 +1,35 @@
-command for running the project:
+# Project Setup
 
-composer install
-php artisan serve
+## Command for Running the Project
 
-api for searching the airports:
+To set up and run the project, follow these steps:
+
+1. **Install Dependencies**
+
+    ```bash
+    composer install
+    ```
+
+2. **Run the Laravel Development Server**
+
+    ```bash
+    php artisan serve
+    ```
+
+## API for Searching Airports
+
+The API endpoint for searching airports is:
+
 http://localhost:8000/api/airports/search
-payload:
+
+
+### Request Payload
+
+The request payload for the API can include the following parameters:
+
+```json
 {
-    "search": "dubai" // not required
-    page: 1, // not required and minimum value is 1
-    per_page: 20 // not required and minimum value is 30
+    "search": "dubai",       // Optional
+    "page": 1,               // Optional, minimum value is 1
+    "per_page": 20           // Optional, minimum value is 30
 }
